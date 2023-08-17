@@ -1,7 +1,6 @@
 import { users } from "../../mock_data.js";
-import ProductInfo from "./components/ProductInfo.jsx";
 
-export default function ProductCard({ info, email }) {
+export default function ProductCard({ info = null, email = null }) {
   console.log("users: ", users);
   return (
     <div>
@@ -14,9 +13,8 @@ export default function ProductCard({ info, email }) {
           justifyContent: "center",
         }}
       >
-        {/*  */}
         {info}
-        <p>email: {email} </p>
+        {email}
       </div>
     </div>
   );
