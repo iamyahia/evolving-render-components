@@ -1,7 +1,5 @@
-import { users } from "../../mock_data.js";
-
+// eslint-disable-next-line react/prop-types
 export default function ProductCard({ info = null, email = null }) {
-  console.log("users: ", users);
   return (
     <div>
       <div

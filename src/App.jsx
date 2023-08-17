@@ -2,7 +2,7 @@
 import ProductCard from "./components/productCard";
 import ProductInfo from "./components/productCard/components/ProductInfo";
 import ProductTitle from "./components/productCard/components/ProductTitle";
-import { users } from "./mock_data.js";
+import { products } from "./mock_data.js";
 
 export default function App() {
   return (
@@ -14,7 +14,7 @@ export default function App() {
         gridRowGap: "12px",
       }}
     >
-      {users.map((user, index) => (
+      {products.map((user, index) => (
         <ProductCard
           info={
             <ProductInfo>
@@ -32,14 +32,14 @@ export default function App() {
         <ProductCard
           info={
             <ProductInfo>
-              <ProductTitle name={users[5].name} />
+              <ProductTitle name={products[5].name} />
             </ProductInfo>
           }
-          email={users[5].email}
+          email={products[5].email}
         />
       </div>
       <div style={{ backgroundColor: "red" }}>
-        <ProductCard email={<p>users[5].email</p>} />
+        <ProductCard email={<p>products[5].email</p>} />
       </div>
     </div>
   );
