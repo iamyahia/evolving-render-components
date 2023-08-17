@@ -14,9 +14,12 @@ export default function App() {
     >
       {users.map((user, index) => (
         <ProductCard
-          name={user.name}
-          date={user.date}
-          gender={user.gender}
+          info={
+            <ProductCard.Info>
+              <ProductCard.Title name={user.name} />
+              <p>{user.date}</p>
+            </ProductCard.Info>
+          }
           email={user.email}
           key={index}
         />

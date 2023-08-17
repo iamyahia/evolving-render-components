@@ -1,9 +1,8 @@
-// import React from "react";
-import { users } from "../../mock_data.js";
-import ProductInfo from "./components/ProductInfo.jsx";
+import ProductInfo from "./components/ProductInfo";
+import ProductTitle from "./components/ProductTitle";
 
-export default function ProductCard({ name, date, email }) {
-  console.log("users: ", users);
+// eslint-disable-next-line react/prop-types
+export default function ProductCard({ info = null, email = null }) {
   return (
     <div>
       <div
@@ -20,3 +19,6 @@ export default function ProductCard({ name, date, email }) {
     </div>
   );
 }
+
+ProductCard.Info = ProductInfo;
+ProductCard.Title = ProductTitle;
