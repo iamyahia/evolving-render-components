@@ -1,5 +1,4 @@
-import React from "react";
-
-export default function ProductTitle({ name }) {
-  return <>{name}</>;
+// eslint-disable-next-line react/prop-types
+export default function ProductTitle({ children }) {
+  return children;
 }

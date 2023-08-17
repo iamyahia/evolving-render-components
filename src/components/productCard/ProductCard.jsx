@@ -14,7 +14,8 @@ export default function ProductCard({ info = null, email = null }) {
           justifyContent: "center",
         }}
       >
-        <ProductInfo name={name} date={date} email={email} />
+        {info}
+        {email}
       </div>
     </div>
   );

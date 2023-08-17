@@ -1,6 +1,6 @@
 // import React from "react";
 import ProductCard from "./components/productCard";
-import { users } from "./mock_data.js";
+import { products } from "./mock_data.js";
 
 export default function App() {
   return (
@@ -12,11 +12,13 @@ export default function App() {
         gridRowGap: "12px",
       }}
     >
-      {users.map((user, index) => (
+      {products.map((user, index) => (
         <ProductCard
           info={
             <ProductCard.Info>
-              <ProductCard.Title name={user.name} />
+              <ProductCard.Title>
+                <i>{products[5].name}</i>
+              </ProductCard.Title>
               <p>{user.date}</p>
             </ProductCard.Info>
           }
@@ -24,6 +26,19 @@ export default function App() {
           key={index}
         />
       ))}
+
+      <div style={{ backgroundColor: "red" }}>
+        <ProductCard
+          info={
+            <ProductCard.Info>
+              <ProductCard.Title>
+                <strong>{products[5].name}</strong>
+              </ProductCard.Title>
+            </ProductCard.Info>
+          }
+          email={products[5].email}
+        />
+      </div>
     </div>
   );
 }
