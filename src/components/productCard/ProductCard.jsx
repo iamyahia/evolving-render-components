@@ -1,7 +1,8 @@
 // import React from "react";
 import { users } from "../../mock_data.js";
+import ProductInfo from "./components/ProductInfo.jsx";
 
-export default function ProductCard({ name, date, gender, email }) {
+export default function ProductCard({ name, date, email }) {
   console.log("users: ", users);
   return (
     <div>
@@ -14,10 +15,7 @@ export default function ProductCard({ name, date, gender, email }) {
           justifyContent: "center",
         }}
       >
-        <p>name: {name}</p>
-        {date && <p>date: {date}</p>}
-        <p>gender: {gender}</p>
-        {email && <p>email: {email}</p>}
+        <ProductInfo name={name} date={date} email={email} />
       </div>
     </div>
   );
