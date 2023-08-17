@@ -17,10 +17,10 @@ export default function App() {
       {users.map((user, index) => (
         <ProductCard
           info={
-            <ProductInfo
-              name={<ProductTitle name={user.name} />}
-              date={<p>{user.date}</p>}
-            />
+            <ProductInfo>
+              <ProductTitle name={user.name} />
+              <p>{user.date}</p>
+            </ProductInfo>
           }
           email={user.email}
           key={index}
@@ -30,7 +30,11 @@ export default function App() {
       {/* the following component is example for make it more clear */}
       <div style={{ backgroundColor: "red" }}>
         <ProductCard
-          info={<ProductInfo name={<ProductTitle name={users[5].name} />} />}
+          info={
+            <ProductInfo>
+              <ProductTitle name={users[5].name} />
+            </ProductInfo>
+          }
           email={users[5].email}
         />
       </div>

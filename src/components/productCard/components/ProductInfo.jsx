@@ -1,8 +1,3 @@
-export default function ProductInfo({ name, date = null }) {
-  return (
-    <div>
-      {name}
-      {date}
-    </div>
-  );
+export default function ProductInfo({ children }) {
+  return <div>{children}</div>;
 }
