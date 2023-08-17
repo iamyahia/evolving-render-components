@@ -1,5 +1,6 @@
 // import React from "react";
 import ProductCard from "./components/productCard";
+import ProductInfo from "./components/productCard/components/ProductInfo";
 import { users } from "./mock_data.js";
 
 export default function App() {
@@ -14,13 +15,19 @@ export default function App() {
     >
       {users.map((user, index) => (
         <ProductCard
-          name={user.name}
-          date={user.date}
-          gender={user.gender}
+          info={<ProductInfo name={user.name} date={user.date} />}
           email={user.email}
           key={index}
         />
       ))}
+
+      {/* the following component is example for make it more clear */}
+      <div style={{ backgroundColor: "red" }}>
+        <ProductCard
+          info={<ProductInfo name={users[5].name} />}
+          email={users[5].email}
+        />
+      </div>
     </div>
   );
 }
